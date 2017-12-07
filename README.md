@@ -13,6 +13,8 @@ Disclaimer: This repo requires Ruby to be installed in order to install the [sas
 3. `bower i`
 4. `gulp`
 
+Then copy the contents from `dist/` to `DesignSystem/source/styleguidekit/` and check the files in.
+
 # Important stuff below, but some of if might be out of date.
 
 ![license](https://img.shields.io/github/license/pattern-lab/styleguidekit-assets-default.svg)
