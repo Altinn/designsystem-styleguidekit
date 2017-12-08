@@ -130,3 +130,11 @@ gulp.task('default', ['build:bower', 'build:css-patternlab', 'build:html', 'buil
 	}
 	
 });
+
+// Copies the contents of dist into DesignSystem project. All projects are expected to be in the same directory
+gulp.task('copy:copy-to-DesignSystem', function() {
+  
+  // Export storefront-css to style guide css directory
+  gulp.src(['./dist/*', '!dist/bower_components'])
+    .pipe(gulp.dest('../DesignSystem/source/styleguidekit/'));
+});

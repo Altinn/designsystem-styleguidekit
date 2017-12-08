@@ -96,7 +96,8 @@ $preloader-status-border-top-color: #3498DB;
     transform-origin: 50% 0;
 
     &:after {
-      @extend .sg-acc-handle:after;
+      color: $nav-caret-color-active;
+      content: '\25BC';
       top: -1px;
      }
 

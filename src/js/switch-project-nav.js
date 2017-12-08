@@ -135,8 +135,6 @@ function removePagesAndTemplatesFromNav(project) {
 }
 
 function changeCss(project) {
-  <!-- DEFAULT - Hide preloader in iFrame -->
-  $($viewPortContents).contents().find('.a-sg-content-preloader').hide();
   switch (project) {
   case 'altinn':
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', true);
