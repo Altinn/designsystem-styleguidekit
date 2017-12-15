@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var args = require('yargs').argv;
+var del = require('del');
 var gulpLoadPlugins    = require('gulp-load-plugins');
 var plugins            = gulpLoadPlugins({ scope: ['devDependencies'] });
 plugins.del            = require("del");
@@ -131,8 +132,17 @@ gulp.task('default', ['build:bower', 'build:css-patternlab', 'build:html', 'buil
 	
 });
 
+gulp.task('clean:designsystem-dest-paths', function () {
+    del([
+        '../DesignSystem/source/styleguidekit/index.html',
+    ], { force: true });
+    del([
+        '../DesignSystem/source/styleguidekit/styleguide/**/*',
+    ], { force: true });
+});
+
 // Copies the contents of dist into DesignSystem project. All projects are expected to be in the same directory
-gulp.task('copy:copy-to-DesignSystem', function() {
-  gulp.src(['./dist/*', '!dist/bower_components'])
+gulp.task('copy:copy-to-designsystem', function() {
+  gulp.src(['./dist/**', '!dist/bower_components'])
     .pipe(gulp.dest('../DesignSystem/source/styleguidekit/'));
 });
