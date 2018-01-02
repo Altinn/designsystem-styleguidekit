@@ -146,7 +146,7 @@ function changeCss(project) {
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
     break;
-  case 'brreg':
+  case 'brsys':
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
