@@ -70,7 +70,7 @@ $preloader-status-border-top-color: #3498DB;
         @include a-sg-transform-switch(0%, 100%, 200%);
       }
 
-      &.brreg {
+      &.brsys {
         @include a-sg-transform-switch(100%, 0%, 200%);
       }
 

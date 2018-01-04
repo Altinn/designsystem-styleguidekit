@@ -26,9 +26,9 @@ var updateDropdownLayout = function(selectedProject) {
     $(switchClass + ' li').eq(0).css('display', 'none');
     $(switchClass).addClass('altinn');
     break;
-  case 'brreg':
+  case 'brsys':
     $(switchClass + ' li').eq(1).css('display', 'none');
-    $(switchClass).addClass('brreg');
+    $(switchClass).addClass('brsys');
     break;
   case 'altinnett':
     $(switchClass + ' li').eq(2).css('display', 'none');
@@ -80,11 +80,11 @@ $.fn.hasAnyProjectStateClass = function(availableProjects) {
 };
 
 function checkAndChangeComponentElements(project, elements) {
-  var availableProjects = ['altinn', 'brreg', 'altinnett'];
+  var availableProjects = ['altinn', 'brsys', 'altinnett'];
   if (getSelectedProject() === null) {
     setSelectedProject('altinn');
     $('.display-altinnett').hide();
-    $('.display-brreg').hide();
+    $('.display-brsys').hide();
   }
 
   $.each(elements, function(index, element) {
@@ -106,14 +106,14 @@ function removePagesAndTemplatesFromNav(project) {
   $patternTypeLinks.show();
   switch (project) {
   case 'altinn':
-    projectLinksToHide = ['maler-brreg', 'sider-brreg', 'maler-altinnett', 'sider-altinnett'];
+    projectLinksToHide = ['maler-brsys', 'sider-brsys', 'maler-altinnett', 'sider-altinnett'];
     $patternTypeLinks.each(function() {
       if ($.inArray($(this).text().toLowerCase(), projectLinksToHide) !== -1) {
         $(this).hide();
       }
     });
     break;
-  case 'brreg':
+  case 'brsys':
     projectLinksToHide = ['maler-infoportal', 'sider-infoportal', 'maler-altinnett', 'sider-altinnett', 'maler-portal', 'sider-portal'];
     $patternTypeLinks.each(function() {
       if ($.inArray($(this).text().toLowerCase(), projectLinksToHide) !== -1) {
@@ -122,7 +122,7 @@ function removePagesAndTemplatesFromNav(project) {
     });
     break;
   case 'altinnett':
-    projectLinksToHide = ['maler-brreg', 'sider-brreg', 'maler-infoportal', 'sider-infoportal', 'maler-portal', 'sider-portal'];
+    projectLinksToHide = ['maler-brsys', 'sider-brsys', 'maler-infoportal', 'sider-infoportal', 'maler-portal', 'sider-portal'];
     $patternTypeLinks.each(function() {
       if ($.inArray($(this).text().toLowerCase(), projectLinksToHide) !== -1) {
         $(this).hide();
@@ -146,7 +146,7 @@ function changeCss(project) {
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
     break;
-  case 'brreg':
+  case 'brsys':
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
@@ -157,11 +157,11 @@ function changeCss(project) {
 }
 
 function toggleWelcomeText(project) {
-  if (project === 'brreg') {
+  if (project === 'brsys') {
     $($viewPortContents).contents().find('.welcome-panel-altinn').hide();
-    $($viewPortContents).contents().find('.welcome-panel-brreg').show();
+    $($viewPortContents).contents().find('.welcome-panel-brsys').show();
   } else {
-    $($viewPortContents).contents().find('.welcome-panel-brreg').hide();
+    $($viewPortContents).contents().find('.welcome-panel-brsys').hide();
     $($viewPortContents).contents().find('.welcome-panel-altinn').show();
   }
 }
@@ -190,7 +190,7 @@ function initSwitch() {
 $('#sg-viewport').load(function() { // iframe
   initSwitch();
 });
-
+    /*
 $(window).on('load', function() {
   var $body = 'body';
   $($body).css({ overflow: 'hidden' });
@@ -198,7 +198,7 @@ $(window).on('load', function() {
   $('.a-sg-content-preloader:first').delay(350).fadeOut('slow');
   $($body).delay(350).css({ overflow: 'visible' });
 });
-
+  */
 $(document).ready(function() {
   $($switchLabelClass).click(function() {
     $($switchClass).toggleClass('active');

@@ -60,3 +60,6 @@ typings/
 src/bower_components/*
 .sass-cache/*
 .DS_Store
+/dist/*
+/.idea/*
+

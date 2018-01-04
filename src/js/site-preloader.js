@@ -1,4 +1,4 @@
-function timeOutPreloaderAnimation() {
+/*function timeOutPreloaderAnimation() {
   $('.a-sg-content-preloader:first').fadeIn('slow');
   setTimeout(function() {
     $('.a-sg-content-preloader-status:first').fadeIn(350);
@@ -20,3 +20,4 @@ $(document).on('click', 'a[class*="sg-pop sg-nav-menus"]', function() {
 document.addEventListener('DOMContentLoaded', function() {
   timeOutPreloaderAnimation();
 }, false);
+    */
