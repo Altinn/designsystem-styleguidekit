@@ -2036,11 +2036,11 @@ var pluginLoader = {
 
 pluginLoader.init();
 
-/*function timeOutPreloaderAnimation() {
+function timeOutPreloaderAnimation() {
   $('.a-sg-content-preloader:first').fadeIn('slow');
   setTimeout(function() {
     $('.a-sg-content-preloader-status:first').fadeIn(350);
-  }, 1000);
+  }, 2000);
 }
 
 $('#sg-viewport').on('load', function() {
@@ -2058,7 +2058,7 @@ $(document).on('click', 'a[class*="sg-pop sg-nav-menus"]', function() {
 document.addEventListener('DOMContentLoaded', function() {
   timeOutPreloaderAnimation();
 }, false);
-    */
+ 
 
 var $switchClass = '.a-sg-switch-dropdown';
 var $switchLabelClass = $switchClass + ' .a-sg-sellabel';
@@ -2199,17 +2199,17 @@ function removePagesAndTemplatesFromNav(project) {
 function changeCss(project) {
   switch (project) {
   case 'altinn':
-    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brsys.css\']').prop('disabled', true);
+    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', false);
     break;
   case 'altinnett':
-    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brsys.css\']').prop('disabled', true);
+    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
     break;
   case 'brsys':
-    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brsys.css\']').prop('disabled', false);
+    $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.brreg.css\']').prop('disabled', false);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.dist.altinnett.css\']').prop('disabled', true);
     $($viewPortContents).contents().find('head link[href~=\'../../css/style.prototype.altinn.css\']').prop('disabled', true);
     break;
