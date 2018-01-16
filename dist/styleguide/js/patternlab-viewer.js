@@ -2036,11 +2036,11 @@ var pluginLoader = {
 
 pluginLoader.init();
 
-/*function timeOutPreloaderAnimation() {
+function timeOutPreloaderAnimation() {
   $('.a-sg-content-preloader:first').fadeIn('slow');
   setTimeout(function() {
     $('.a-sg-content-preloader-status:first').fadeIn(350);
-  }, 1000);
+  }, 2000);
 }
 
 $('#sg-viewport').on('load', function() {
@@ -2051,14 +2051,10 @@ $('#sg-viewport').on('load', function() {
   $($mainBody).delay(350).css({ overflow: 'visible' });
 });
 
-$(document).on('click', 'a[class*="sg-pop sg-nav-menus"]', function() {
-  timeOutPreloaderAnimation();
-});
-
 document.addEventListener('DOMContentLoaded', function() {
   timeOutPreloaderAnimation();
 }, false);
-    */
+ 
 
 var $switchClass = '.a-sg-switch-dropdown';
 var $switchLabelClass = $switchClass + ' .a-sg-sellabel';
